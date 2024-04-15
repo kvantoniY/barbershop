@@ -1,0 +1,16 @@
+.description {
+    margin-top: 200px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-top: 50;
+    margin-bottom: 50px;
+    font-weight: 200;
+    line-height: 40px;
+}
+
+@media (max-width: 500px) { 
+    .description {
+        font-size: 16px;
+        
+    }
+}

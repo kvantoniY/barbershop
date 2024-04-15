@@ -1,0 +1,11 @@
+.map_container {
+    background-color: aliceblue;
+}
+
+.map_container iframe {
+    width: 100%;
+}
+
+.map_block {
+
+}

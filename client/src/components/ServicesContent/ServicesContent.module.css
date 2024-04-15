@@ -1,0 +1,25 @@
+
+.services_content_text {
+    display: grid;
+    padding: 15px;
+    grid-template-columns: 4fr 1fr 1fr;
+    color: #B38861;
+    font-weight: 1000;
+    font-size: 18px;
+}
+
+.empty {
+    color: white;
+}
+@media (max-width: 800px) {
+    .services_content_text {
+        grid-template-columns: 3fr 1fr 1fr;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services_content_text {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
