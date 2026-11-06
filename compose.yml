@@ -1,0 +1,19 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: barber_db
+      MYSQL_USER: portfolio
+      MYSQL_PASSWORD: portfolio_local
+      MYSQL_ROOT_PASSWORD: local_root_password
+    ports:
+      - "127.0.0.1:53306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+volumes:
+  db_data:

@@ -35,7 +35,7 @@ const Admin = () => {
   return (
     
     <div>
-      {localStorage.getItem("auth") === 'false' ? (
+      {localStorage.getItem("auth") !== 'true' ? (
         <div>
           <h2>Авторизация в админ панель</h2>
           <input

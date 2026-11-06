@@ -1,3 +1,6 @@
+require('dotenv').config();
+const fs = require('fs');
+fs.mkdirSync(require('path').join(__dirname, 'static'), { recursive: true });
 const express = require('express')
 const cors = require('cors')
 const router = require('./routes')
@@ -23,7 +26,8 @@ const start = async () => {
       await sequelize.sync()
       app.listen(PORT, () => console.log(`server started ${PORT}`))
   } catch(e) {
-
+    console.error('Не удалось запустить API:', e.message);
+    process.exit(1);
   }
 }
 
